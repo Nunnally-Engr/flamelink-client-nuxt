@@ -40,7 +40,6 @@ export default {
   },
   async asyncData({ app }) {
     try {
-      console.log('(´・ω・｀)')
       const myblog = await app.flamelink.content.get('myblog', {
         populate: ['image']
       })

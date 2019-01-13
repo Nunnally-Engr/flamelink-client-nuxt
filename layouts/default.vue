@@ -56,14 +56,7 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        { icon: 'apps', title: 'Home', to: '/' },
-        {
-          icon: 'bubble_chart',
-          title: 'Flamelinkでブログ♪',
-          to: '/myblog'
-        }
-      ],
+      items: [{ icon: 'apps', title: 'Home', to: '/' }],
       miniVariant: false,
       title: 'Nunnally Blog'
     }
