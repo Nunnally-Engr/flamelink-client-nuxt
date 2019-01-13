@@ -7,12 +7,12 @@
       <v-card>
         <v-card-title primary-title>
           <div class="blog-box">
-            <div class="blog-date">投稿日：{{ ditail.dataFormat }}</div>
+            <div class="blog-date">投稿日：{{ detail.dataFormat }}</div>
             <h3 
-              class="headline mb-0">{{ ditail.title }}</h3>
+              class="headline mb-0">{{ detail.title }}</h3>
             <div 
               class="blog-content" 
-              v-html="ditail.content"/>
+              v-html="detail.content"/>
           </div>
         </v-card-title>
       </v-card>
@@ -23,11 +23,11 @@
 export default {
   data() {
     return {
-      ditail: ''
+      detail: ''
     }
   },
   async created() {
-    this.ditail = await this.$route.query
+    this.detail = await this.$route.query
   }
 }
 </script>
