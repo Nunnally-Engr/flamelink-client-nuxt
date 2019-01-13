@@ -19,9 +19,6 @@ export default ({ app }) => {
       firebaseApp = admin.app()
     }
   } else {
-    const now = new Date()
-    console.log('>>> process.server(false)：' + now)
-
     const firebase = require('firebase/app')
     require('firebase/auth')
     require('firebase/database')

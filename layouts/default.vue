@@ -63,7 +63,6 @@ export default {
   },
   methods: {
     top: function() {
-      console.log('(´・ω・｀)')
       this.$router.push({ path: '/' })
     }
   }
