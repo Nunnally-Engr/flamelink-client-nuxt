@@ -33,7 +33,9 @@
       app
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-toolbar-title v-text="title"/>
+      <v-toolbar-title
+        @click="top()" 
+        v-text="title"/>
     </v-toolbar>
     <v-content>
       <v-container>
@@ -68,3 +70,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+.v-toolbar__title:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+</style>
