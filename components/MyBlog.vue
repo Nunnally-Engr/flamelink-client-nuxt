@@ -3,11 +3,11 @@
     class="v-card">
     <v-card-title primary-title>
       <div class="blog-box">
-        <div class="blog-date">投稿日：{{ myblog.date.substr(0, 10) }}</div>
+        <!-- <div class="blog-date">投稿日：{{ myblog.date.substr(0, 10) }}</div>
         <h3 
           class="headline mb-0" 
           @click="detail(myblog)">{{ myblog.title }}</h3>
-        <div class="blog-summary">{{ myblog.summary }}</div>
+        <div class="blog-summary">{{ myblog.summary }}</div> -->
       </div>
     </v-card-title>
   </v-card>
@@ -29,11 +29,11 @@ export default {
     console.log(this.myblog)
   },
   methods: {
-    detail: function(item) {
-      // TODO: 日付フォーマット
-      item.dataFormat = item.date.substr(0, 10)
-      this.$router.push({ path: '/detail', query: item })
-    }
+    // detail: function(item) {
+    //   // TODO: 日付フォーマット
+    //   item.dataFormat = item.date.substr(0, 10)
+    //   this.$router.push({ path: '/detail', query: item })
+    // }
   }
 }
 </script>
