@@ -1,4 +1,4 @@
-import * as flamelink from 'flamelink'
+import flamelink from 'flamelink'
 
 export default ({ app }) => {
   let firebaseApp
