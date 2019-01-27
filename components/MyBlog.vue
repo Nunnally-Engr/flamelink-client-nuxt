@@ -25,8 +25,8 @@ export default {
     return {}
   },
   created() {
-    console.log('=== MyBlog ===')
-    console.log(this.myblog)
+    // console.log('=== MyBlog ===')
+    // console.log(this.myblog)
   },
   methods: {
     // detail: function(item) {
