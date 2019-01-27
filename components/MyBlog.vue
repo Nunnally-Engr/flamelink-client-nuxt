@@ -32,7 +32,7 @@ export default {
     detail: function(item) {
       // TODO: 日付フォーマット
       item.dataFormat = item.date.substr(0, 10)
-      this.$router.push({ path: '/inspire', query: item })
+      this.$router.push({ path: '/detail', query: item })
     }
   }
 }

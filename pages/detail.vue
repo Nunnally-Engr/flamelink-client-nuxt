@@ -4,7 +4,7 @@
       xs12
       sm8 
       offset-sm3>
-      <v-card>
+      <v-card v-show="isDisplayFlg">
         <v-card-title primary-title>
           <div class="blog-box">
             <div class="blog-date">投稿日：{{ detail.dataFormat }}</div>
@@ -23,11 +23,13 @@
 export default {
   data() {
     return {
-      detail: ''
+      detail: '',
+      isDisplayFlg: false
     }
   },
   async created() {
     this.detail = await this.$route.query
+    this.isDisplayFlg = true
   }
 }
 </script>
