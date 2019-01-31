@@ -2,14 +2,14 @@
   <v-layout>
     <v-flex 
       xs12
-      sm8 
-      offset-sm3>
+      sm10>
       <div class="myblogs">
         <div 
           v-for="myblog in myblogs" 
           :key="myblog.id" 
           class="card_container">
-          <MyBlog :myblog="myblog" />
+          <!-- <MyBlog :myblog="myblog" /> -->
+          <AppArticleList :myblog="myblog" />
         </div>
       </div>
     </v-flex>
@@ -18,16 +18,18 @@
 
 <script>
 import MyBlog from '~/components/MyBlog.vue'
+import AppArticleList from '~/components/AppArticleList.vue'
 import { orderby } from '~/utils/format'
 
 export default {
   components: {
-    MyBlog
+    MyBlog,
+    AppArticleList
   },
   async asyncData({ app }) {
     try {
       const myblogs = await app.flamelink.content.get('myblog', {
-        populate: ['image']
+        populate: true
       })
       // 降順に並び替えて戻す
       return { myblogs: orderby(myblogs, 'date', false) }
@@ -38,3 +40,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.layout {
+  justify-content: center;
+}
+</style>

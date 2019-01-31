@@ -76,4 +76,8 @@ export default {
   transition: all 0.2s;
   opacity: 0.7;
 }
+.container {
+  background-color: #fff !important;
+  color: #333 !important;
+}
 </style>
